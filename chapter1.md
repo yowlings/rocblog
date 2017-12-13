@@ -32,7 +32,9 @@
 
 ![](/assets/2.jpg)![](/assets/3.jpg)
 
-然后在周围的安装孔上拧上螺柱，第一层与第二层之间使用短款螺柱，空间用于安装电机和电池，电机的高度刚好是短款螺柱的长度。安装电机时正好能够卡在一二层之间，上下各用长款细螺钉穿过小孔固定住电机。
+## 组装
+
+准备好材料后在支撑板周围的安装孔上拧上螺柱，第一层与第二层之间使用短款螺柱，空间用于安装电机和电池，电机的高度刚好是短款螺柱的长度。安装电机时正好能够卡在一二层之间，上下各用长款细螺钉穿过小孔固定住电机。
 
 ![](/assets/4.jpg)Turtlebot3的两款机器人采用的都是前驱式结构，电机主动轮安装在机器人的前端，后端的从动轮采用的是万向钢球。
 
@@ -48,30 +50,56 @@
 
 然后是安装第一个电路板，也是机器人的运动控制板，板上印有OpenCR的字样。电路板是OpenHardware社区开源的电路板之一，因而它的电路图、原理图都能在网上找到。
 
+![](/assets/10.jpg)
+
+其次是第二块电路板，这里waffle使用的是Intel的一款Joule型号的开发板作为机器人的下位机，也就是跑ROS的那块主板。板子自带wifi模块，配有micro HDMI的显示接口（在安装Ubuntu系统和ROS的过程中需要用到）、一个micro usb、一个USB（连接HUB进行扩展）和一个type C接口，算是一块应有尽有的标准开发板了。
+
+![](/assets/11.jpg)![](/assets/12.jpg)![](/assets/13.jpg)![](/assets/14.jpg)![](/assets/15.jpg)![](/assets/16.jpg)
+
+详细的安装过程我们就不一一在此细说了，每一步的教程都能在Turtlebot3的官网上找到，毕竟是turtlebot啊，我相信买这款机器人的70%都是冲着他们完备的支撑学习资料去的。
+
+## 传感器
+
+最后我们来看一看waffle给配备的两种关键性的传感器。
+
+首先是激光雷达，激光雷达优点像是rplidarA1，采用的依然是履带式传动机构，毕竟是一款低成本的机器人，为了控制成本也是无法跟当前更好的一些激光雷达相比的，但是基础功能还在就行。
+
+![](/assets/17.jpg)![](/assets/18.jpg)![](/assets/19.jpg)
+
+然后我们看一下waffle配备的视觉模组。
+
+同样也是采用Intel出的一款CREATIVE深度摄像头视觉模组，尺寸细小13cm的细长身材通过两个固定之间安装在机器人的正前方，让全身都是黑色的机器人突然有了蓝色的科技美感。
+
+![](/assets/20.jpg)![](/assets/21.jpg)
+
+## 运行
+
+最后我们怼上乌龟屁股后面的那两根电源线接头，然后拨动控制板上的电源开关，之后两块板子的指示灯都亮起来了，激光雷达也同时转动起来。
+
+从转动频率来看，激光雷达的扫描次数应该在3圈左右，这与目前市面上的平均10HZ的激光雷达扫描频率差距还是很大的。
+
+![](/assets/22.jpg)![](/assets/23.jpg)最后附一份机器人的具体参数表。
+
 | 最大限速度 | 0.22 m/s |
 | :--- | :--- |
 | 最大角速度 | 2.84 rad/s \(162.72 deg/s\) |
 | 最大负载 | 15kg |
 | 尺寸 \(长 x 款 x 高\) | 138mm x 178mm x 192mm |
 | 重量 \(+ SBC + Battery + Sensors\) | 1kg |
-| 最大爬坡高度 | 10 mm or lower  |
+| 最大爬坡高度 | 10 mm or lower |
 | 标准使用时间 | 2h 30m |
-| 标准充电时间 |  2h 30m  |
+| 标准充电时间 | 2h 30m |
 | 处理器 | 32-bit ARM Cortex®-M7 with FPU \(216 MHz, 462 DMIPS\) |
 | IMU | Gyroscope 3 Axis Accelerometer 3 Axis Magnetometer 3 Axis |
-| 电源连接线 |  3.3V / 800mA 5V / 4A 12V / 1A |
+| 电源连接线 | 3.3V / 800mA 5V / 4A 12V / 1A |
 | 扩展引脚 | GPIO 18 pins Arduino 32 pin |
-| 外接接口 |  UART x3, CAN x1, SPI x1, I2C x1, ADC x5, 5pin OLLO x4 |
+| 外接接口 | UART x3, CAN x1, SPI x1, I2C x1, ADC x5, 5pin OLLO x4 |
 | 可编程LED | User LED x 4 |
 | 状态LED灯 | Board status LED x 1 Arduino LED x 1 Power LED x 1 |
-| 按钮和开关 |  Push buttons x 2, Reset button x 1, Dip switch x 2 |
+| 按钮和开关 | Push buttons x 2, Reset button x 1, Dip switch x 2 |
 | 电池 | Lithium polymer 11.1V 1800mAh / 19.98Wh 5C |
 
-![](/assets/10.jpg)![](/assets/11.jpg)![](/assets/12.jpg)![](/assets/13.jpg)![](/assets/14.jpg)![](/assets/15.jpg)![](/assets/16.jpg)![](/assets/17.jpg)
-
-![](/assets/17.jpg)
-
-## ![](/assets/17.jpg)![](/assets/18.jpg)![](/assets/19.jpg)![](/assets/20.jpg)![](/assets/21.jpg)![](/assets/22.jpg)![](/assets/23.jpg)整体评价
+## 整体评价
 
 
 
